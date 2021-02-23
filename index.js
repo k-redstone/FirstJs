@@ -1,5 +1,12 @@
-function sayHello(name, age){
-    console.log(`Hello ${name} you are ${age} years old`);
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked"
+
+function handleClick(){
+    title.classList.toggle(CLICKED_CLASS);
 }
 
-sayHello('RedStone', 23);
+function init(){
+    title.addEventListener("click", handleClick);
+}
+init()
